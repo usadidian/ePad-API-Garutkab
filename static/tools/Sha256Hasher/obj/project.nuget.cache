@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "dgSpecHash": "NfXqq1vFMdo=",
+  "success": false,
+  "projectFilePath": "E:\\ePad35\\ePad_API\\static\\tools\\Sha256Hasher\\Sha256Hasher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dnd\\.nuget\\packages\\linq2db\\1.0.0\\linq2db.1.0.0.nupkg.sha512",
+    "C:\\Users\\dnd\\.nuget\\packages\\system.data.sqlclient\\4.1.0\\system.data.sqlclient.4.1.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Sha256Hasher depends on System.Data.SqlClient (>= 1.0.0) but System.Data.SqlClient 1.0.0 was not found. System.Data.SqlClient 4.1.0 was resolved instead.",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.1.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.1.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package linq2db 1.0.0 is not compatible with net35 (.NETFramework,Version=v3.5). Package linq2db 1.0.0 supports:\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - sl4 (Silverlight,Version=v4.0)\r\n  - sl5 (Silverlight,Version=v5.0)",
+      "libraryId": "linq2db",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Data.SqlClient 4.1.0 is not compatible with net35 (.NETFramework,Version=v3.5). Package System.Data.SqlClient 4.1.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net451 (.NETFramework,Version=v4.5.1)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netstandard1.2 (.NETStandard,Version=v1.2)\r\n  - netstandard1.3 (.NETStandard,Version=v1.3)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    }
+  ]
+}

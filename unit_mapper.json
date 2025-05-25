@@ -1,0 +1,310 @@
+[
+  {
+    "id": "",
+    "attributes": {
+      "appCopyrightYear": "2022",
+      "appCopyrightBy": "Kabupaten Nusantara",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_default",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad2021.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+
+  {
+    "id": "epad-halbar",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Halmahera Barat",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_halbar.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-halbar.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-halsel",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Halmahera Selatan",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_halsel.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-halsel.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-halteng",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Halmahera Tengah",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_halteng.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-halteng.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-halut",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Halmahera Utara",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_halut.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-halut.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-kepsula",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Kepulauan Sula",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_kepsula.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-kepsula.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-ternate",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kota Ternate",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_ternate.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-ternate.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-tidore",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kota Tidore Kepulauan",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_tidore.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-tidore.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-haltim",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Halmahera Timur",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_haltim.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-haltim.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-morotai",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Pulau Morotai",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_morotai.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-morotai.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-taliabu",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Pulau Taliabu",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_taliabu.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-taliabu.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+
+  {
+    "id": "epad-garut.web.app",
+    "attributes": {
+      "appCopyrightYear": "2022",
+      "appCopyrightBy": "Kabupaten Garut",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1628345317/clientsLogo/logo-owner.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-garut.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo-garut.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epadx-garut.web.app/"
+    }
+  },
+  {
+    "id": "wpo-garut.web.app",
+    "attributes": {
+      "appCopyrightYear": "2022",
+      "appCopyrightBy": "Kabupaten Garut",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1628345317/clientsLogo/logo-owner.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-garut.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo-garut.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epadx-garut.web.app/"
+    }
+  },
+
+
+
+
+  {
+    "id": "epad-malteng",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Maluku Tengah",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_malteng.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-malteng.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-malra",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Maluku Tenggara",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_malra.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-malra.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-tanimbar",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Kepulauan Tanimbar",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_tanimbar.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-tanimbar.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-buru",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Buru",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_buru.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-buru.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-sbt",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Seram Bagian Timur",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_sbt.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-sbt.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-sbb",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Seram Bagian Barat",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_sbb.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-sbb.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-keparu",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Kepulauan Aru",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_keparu.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-keparu.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-mbd",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Maluku Barat Daya",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_mbd.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-mbd.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-brusel",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Buru Selatan",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_brusel.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-brusel.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+  {
+    "id": "epad-ambon",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kota Ambon",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1643886323/clientsLogo/logo-owner_ambon.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-ambon.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo2021.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epad-ex.web.app/"
+    }
+  },
+
+  {
+    "id": "epad-tual",
+    "attributes": {
+      "appCopyrightYear": "2022",
+      "appCopyrightBy": "Kota Tual",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1628345317/clientsLogo/logo-owner_tual.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "https://epad-tual.web.app/",
+      "EPAD_PUBLIC_URL_WP": "https://wpo-tual.web.app/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "https://epadx-garut.web.app/"
+    }
+  },
+  
+  {
+    "id": "localhost:4200",
+    "attributes": {
+      "appCopyrightYear": "2025",
+      "appCopyrightBy": "Kabupaten Nusantara",
+      "appCopyrightByLogoPath": "https://res.cloudinary.com/dbbbtnosk/image/upload/v1628345317/clientsLogo/logo-owner_default.png",
+      "appCopyrightByDesc": "",
+      "EPAD_PUBLIC_URL": "http://localhost:4200/",
+      "EPAD_PUBLIC_URL_WP": "http://localhost:4200/",
+      "EPAD_PUBLIC_URL_EXECUTIVE": "http://localhost:4200/"
+    }
+  }
+]
