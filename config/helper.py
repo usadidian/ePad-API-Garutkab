@@ -15,7 +15,6 @@ from flask_restful import reqparse
 from sqlalchemy.orm.base import class_mapper
 
 # from controller.notifications.fcm_session import push_service
-from controller.notifications.fcm_session import push_service
 
 
 def receive_date():

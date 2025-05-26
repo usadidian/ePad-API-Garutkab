@@ -33,7 +33,7 @@ class Transactions(Resource):
                     in: query
                     type: string
                     required: false
-                    description: Filter by taxpayer entity ID (ObyekBadanNo)
+                    description: Filter by taxpayer entity ID (NPWPD)
                   - name: startDate
                     in: query
                     type: string

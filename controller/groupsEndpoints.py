@@ -3,9 +3,6 @@ from flask_restful import Resource
 from sqlalchemy_serializer import SerializerMixin
 
 from config.database import db
-from controller.endpoints import Endpoints
-from controller.groups import groups
-
 
 class GroupsEndpoints(db.Model, SerializerMixin):
     # serialize_rules = ('-created_by', '-last_updated_by',)

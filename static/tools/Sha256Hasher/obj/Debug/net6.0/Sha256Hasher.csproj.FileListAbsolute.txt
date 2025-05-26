@@ -1,5 +1,0 @@
-E:\ePad35\ePad_API\static\tools\Sha256Hasher\obj\Debug\net6.0\Sha256Hasher.csproj.AssemblyReference.cache
-E:\ePad35\ePad_API\static\tools\Sha256Hasher\obj\Debug\net6.0\Sha256Hasher.GeneratedMSBuildEditorConfig.editorconfig
-E:\ePad35\ePad_API\static\tools\Sha256Hasher\obj\Debug\net6.0\Sha256Hasher.AssemblyInfoInputs.cache
-E:\ePad35\ePad_API\static\tools\Sha256Hasher\obj\Debug\net6.0\Sha256Hasher.AssemblyInfo.cs
-E:\ePad35\ePad_API\static\tools\Sha256Hasher\obj\Debug\net6.0\Sha256Hasher.csproj.CoreCompileInputs.cache

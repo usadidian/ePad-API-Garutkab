@@ -37,7 +37,7 @@ class TaxEntities(Resource):
                     in: query
                     type: string
                     required: false
-                    description: Search by tax number (KohirID) or business name
+                    description: Search by tax number (SKP/SPTP) or business name
                   - name: page
                     in: query
                     type: integer

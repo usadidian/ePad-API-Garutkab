@@ -11,7 +11,6 @@ from config.api_message import success_reads_pagination, failed_reads, success_u
     success_create, success_delete, failed_delete, success_read, failed_read
 from config.database import db
 from config.helper import logger
-from controller.task.task_bridge import GoToTaskUploadAvatar, GoToTaskDeleteAvatar
 from controller.tblGroupUser import tblGroupUser
 from controller.tblUser import tblUser
 

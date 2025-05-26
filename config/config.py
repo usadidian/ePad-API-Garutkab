@@ -7,25 +7,25 @@ from flask import request
 appName = os.environ.get('EPAD_APPNAME')
 appNameMobile = os.environ.get('EPAD_MOBILE_APPNAME')
 # appFrontWebUrl() = os.environ.get('EPAD_PUBLIC_URL')
-
-# Cari lokasi folder tempat config.py berada
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Naik satu folder dari config/ ke project/
-ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
-
-# Gabungkan path ke unitmapper.json
-UNITMAPPER_PATH = os.path.join(ROOT_DIR, "unit_mapper.json")
-
-# Load isi file unitmapper.json
-with open(UNITMAPPER_PATH) as f:
-    UNIT_MAPPERS = {item["id"]: item["attributes"] for item in json.load(f)}
-
-DEFAULT_PUBLIC_URL = os.environ.get("EPAD_PUBLIC_URL", "https://epad2021.web.app/")
-
-def appFrontWebUrl():
-    host = request.host.lower()
-    return UNIT_MAPPERS.get(host, {}).get("EPAD_PUBLIC_URL", DEFAULT_PUBLIC_URL)
+#
+# # Cari lokasi folder tempat config.py berada
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#
+# # Naik satu folder dari config/ ke project/
+# ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
+#
+# # Gabungkan path ke unitmapper.json
+# UNITMAPPER_PATH = os.path.join(ROOT_DIR, "unit_mapper.json")
+#
+# # Load isi file unitmapper.json
+# with open(UNITMAPPER_PATH) as f:
+#     UNIT_MAPPERS = {item["id"]: item["attributes"] for item in json.load(f)}
+#
+# DEFAULT_PUBLIC_URL = os.environ.get("EPAD_PUBLIC_URL", "https://epad2021.web.app/")
+#
+# def appFrontWebUrl():
+#     host = request.host.lower()
+#     return UNIT_MAPPERS.get(host, {}).get("EPAD_PUBLIC_URL", DEFAULT_PUBLIC_URL)
 
 appFrontWebUrlWp = os.environ.get('EPAD_PUBLIC_URL_WP')
 appFrontWebUrlExecutive = os.environ.get('EPAD_PUBLIC_URL_EXECUTIVE')

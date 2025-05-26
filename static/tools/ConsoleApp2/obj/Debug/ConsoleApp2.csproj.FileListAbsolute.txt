@@ -1,6 +1,0 @@
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\bin\Debug\ConsoleApp2.exe
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.AssemblyReference.cache
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\obj\Debug\ConsoleApp2.exe
-E:\ePad35\ePad_API\static\tools\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

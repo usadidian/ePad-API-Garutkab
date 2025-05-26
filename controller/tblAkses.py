@@ -2,8 +2,8 @@ from datetime import datetime
 
 from flask import jsonify
 from flask_restful import Resource, reqparse
-from sqlalchemy import or_, outerjoin, UniqueConstraint
-from sqlalchemy.orm import relationship, aliased
+from sqlalchemy import or_
+from sqlalchemy.orm import relationship
 from sqlalchemy_serializer import SerializerMixin
 
 from config.api_message import success_reads_pagination, success_read, failed_read, \
@@ -12,6 +12,8 @@ from config.database import db
 from config.helper import logger
 from controller.tblGroupUser import tblGroupUser
 from controller.tblMenu import tblMenu
+
+
 # from controller.tblUser import tblUser
 
 
@@ -215,47 +217,6 @@ class tblAkses(db.Model, SerializerMixin):
                 result.append( d )
             return success_reads_pagination( query_execute, result )
 
-        # def post(self, *args, **kwargs):
-        #     parser = reqparse.RequestParser()
-        #     parser.add_argument( 'GroupId', type=str )
-        #     parser.add_argument('MenuId', type=list, location='json')  # Pastikan `MenuId` diterima sebagai list
-        #     parser.add_argument( 'UserUpd', type=str )
-        #     parser.add_argument( 'DateUpd', type=str )
-        #
-        #     uid = kwargs['claim']["UID"]
-        #
-        #     args = parser.parse_args()
-        #     result = []
-        #     for row in result:
-        #         result.append( row )
-        #
-        #     menu_ids = args.get('MenuId', [])
-        #     if not menu_ids:
-        #         logger.warning('MenuId list is empty or not provided')
-        #         return {'error': 'MenuId list is empty or not provided'}, 400
-        #     print(menu_ids)
-        #     for arg in menu_ids:
-        #         if arg is None:
-        #             continue  # Skip if MenuId is None
-        #
-        #         select_current_id = db.session.query(tblMenu).filter(tblMenu.MenuId == arg).first()
-        #         if select_current_id is None:
-        #             logger.warning(f'MenuId {arg} tidak ditemukan di database.')
-        #             continue
-        #
-        #         logger.info(select_current_id.MenuId)
-        #         if select_current_id.Tipe == 'D':
-        #             add_record = tblAkses(
-        #
-        #                 GroupId=args['GroupId'],
-        #                 MenuId=select_current_id.MenuId,
-        #                 UserUpd=uid,
-        #                 DateUpd=datetime.now(),
-        #
-        #             )
-        #             db.session.add( add_record )
-        #             db.session.commit()
-        #             return jsonify( {'status_code': 1, 'message': 'OK', 'data': result} )
 
         def post(self, *args, **kwargs):
             parser = reqparse.RequestParser()
@@ -317,13 +278,9 @@ class tblAkses(db.Model, SerializerMixin):
 
         def put(self, id, *args, **kwargs):
             parser = reqparse.RequestParser()
-            # print( kwargs['claim'] )
             parser.add_argument( 'GroupId', type=str )
             parser.add_argument( 'MenuId', type=str )
-            # parser.add_argument('UserUpd', type=str)
-            # parser.add_argument('DateUpd', type=str)
 
-            # uid = kwargs['claim']["UID"]
             args = parser.parse_args()
             try:
                 select_query = tblAkses.query.filter_by( AksesId=id ).first()

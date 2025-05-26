@@ -1,5 +1,3 @@
-from flask import jsonify
-from flask_restful import Resource
 from sqlalchemy_serializer import SerializerMixin
 
 from config.database import db

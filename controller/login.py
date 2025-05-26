@@ -11,21 +11,15 @@ import jwt
 import yagmail
 from flask import jsonify, make_response, request
 from flask_restful import Resource, abort, reqparse
-from multiprocessing.context import Process
 
 from sqlalchemy.sql.elements import or_
 
 from config.api_message import failed_update, apikey_expired, failed_authentication
-from config.config import jwt_secretkey, jwt_token_exp_min, appName, appFrontWebLogo, appFrontWebUrl, jwt_otp_exp_min, \
+from config.config import jwt_secretkey, jwt_token_exp_min, appName, appFrontWebLogo,  jwt_otp_exp_min, \
     appFrontWebUrlWp, oauth2_clientid, appFrontWebUrlExecutive
 from config.database import db
 from config.helper import logger, checkIsEmail, generateOTP, encrypt_token, decrypt_token, checkIsUserId, checkIsPhone
-from controller.notifications.email_session import emailSendOtp, emailSendOtpMobile, emailSendOtpForgotPwd
-from controller.notifications.fcm_session import sendNotificationNative
-from controller.notifications.notifications import Notifications
-from controller.task.task_bridge import GoToTaskNotificationSendToAll
 from controller.tblGroupUser import tblGroupUser
-from controller.tblUPTOpsen import tblUPTOpsen
 from controller.tblUser import tblUser
 
 
@@ -118,10 +112,6 @@ class UserLogin(Resource):
 
         user_check = user_check.first()
         if user_check:
-            query = db.session.query(tblUPTOpsen.KotaPropID).filter(
-                tblUPTOpsen.UPTID == user_check.WapuID
-            ).first()
-            kotaprop_id = str(query[0]) if query else None
 
             payloads = {
                 'exp': datetime.now() + jwt_token_exp_min,
@@ -139,7 +129,6 @@ class UserLogin(Resource):
                 'IsPenyetoran': user_check.Group.IsPenyetoran,
                 'IsIntegrasi': user_check.Group.IsIntegrasi,
                 'IsWP': user_check.Group.IsWP,
-                'KotaPropID': kotaprop_id or ''
             }
             apikey = jwt.encode(payloads, jwt_secretkey, algorithm='HS256')
             apikeystr = apikey.decode("UTF-8")
@@ -188,15 +177,6 @@ class UserLogin(Resource):
                 'message': 'Login gagal, mohon periksa userid dan password',
                 'data': {}
             }), 500))
-        # except Exception as e:
-        #     # db.session.rollback()
-        #     logger.error(e)
-        #     logger.error(f"========================= LOGIN : FAILED by {args['email']} from domain {request.base_url}")
-        #     return abort(make_response(jsonify({
-        #         'status_code': 212,
-        #         'message': 'Login gagal, mohon periksa email dan password',
-        #         'data': {}
-        #     }), 500))
 
 
 class UpdateDevice(Resource):
@@ -228,46 +208,11 @@ class UpdateDevice(Resource):
                             "type": "session_exp"
                         }
                     }
-                    # sendNotificationToSingleDevice(old_device, notification_data)
-                    sendNotif = sendNotificationNative(old_device, notification_data)
-                    # if sendNotif.status_code == 200:
-                    #     add_notif = Notifications(
-                    #         UserId=data_user.UserId,
-                    #         id_notificationsType=1,
-                    #         title="Sesi Berakhir",
-                    #         description=notifBody,
-                    #         created_by="system"
-                    #     )
-                    #     db.session.add(add_notif)
-                    #     db.session.commit()
+
 
             data_user.DeviceId = new_device
             db.session.commit()
 
-            # email_admin_dev = "amry.maftuh85@gmail.com"
-            # if data_user.Email != email_admin_dev:
-            #     dataAdmin = tblUser.query.filter_by(Email=email_admin_dev).first()
-            #     data_to_notif_all = {
-            #         "body": {
-            #             "notification": {
-            #                 "title": appName,
-            #                 "body": f"{data_user.nama_user} sedang aktif di epad ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')}).",
-            #                 "priority": "high",
-            #                 "icon": appFrontWebLogo,
-            #                 "click_action": f"{appFrontWebUrl()}",
-            #             },
-            #             "name": data_user.nama_user,
-            #             "avatar": data_user.Avatar,
-            #             "date_joined": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            #             "device": dataAdmin.DeviceId,
-            #         },
-            #         "headers": {
-            #             "kjtbdg": 'kjtbdgyess'
-            #         }
-            #     }
-            #     thread = Process(target=GoToTaskNotificationSendToAll, args=(data_to_notif_all,))
-            #     thread.daemon = True
-            #     thread.start()
 
             return jsonify({'status_code': 1, 'message': 'DEVICE UPDATED SUCCESS!'})
         except Exception as e:
@@ -483,13 +428,6 @@ class UserLoginByGoogleWP(Resource):
         # CHECK TO DB
         user_check = tblUser.query.filter_by(Email=google_user['email']).first()
         if user_check:
-            # if user_check.Group.IsWP != 1:
-            #     logger.error(f"========================= LOGIN-WPO-BY-GOOGLE: NOT MEMBER OF WP!")
-            #     return abort(make_response(jsonify({
-            #         'status_code': 212,
-            #         'message': 'Login gagal, anda adalah petugas pajak',
-            #         'data': {}
-            #     }), 500))
 
             # Update field
             if not user_check.nama_user:
@@ -521,12 +459,7 @@ class UserLoginByGoogleWP(Resource):
                 'APIkey': apikeystr,
             }})
         else:
-            # return abort(make_response(jsonify({
-            #     'status_code': 212,
-            #     'message': 'Lanjut Daftar?',
-            #     'data': {}
-            # }), 500))
-            # AUTO REGISTER NEW USER
+
             result = insertNewUserWP(google_user)
             logger.info(
                 f"========================= REGISTER-WPO-BY-GOOGLE SUCCESS by {google_user['email']}")
@@ -647,75 +580,6 @@ class AuthOtpWPO(Resource):
                     'data': {}
                 }), 500))
 
-            # groupId = tblGroupUser.query.filter_by(IsWP=1).first()
-            # addNewUser = tblUser(
-            #     code_group=groupId.code_group,
-            #     GroupId=groupId.GroupId,
-            #     UserUpd=APIKEY_decode["email"].split("@")[0],
-            #     DateUpd=datetime.now(),
-            #     UID=APIKEY_decode["email"].split("@")[0],
-            #     nama_user=APIKEY_decode["email"],
-            #     password=APIKEY_decode["hash"],
-            #     flag_active='1',
-            #     date_exp='2024-01-01 00:00:00.000',
-            #     user_level='60',
-            #     Email=APIKEY_decode["email"],
-            #     Phone=APIKEY_decode["phone"] or "",
-            #     DeviceId=APIKEY_decode["device"] or "",
-            # )
-            # db.session.add(addNewUser)
-            # db.session.commit()
-            #
-            # # NOTIF TO ADMINS GROUP
-            # list_admin = tblUser.query.join(tblGroupUser).filter(tblGroupUser.IsAdmin == 1).all()
-            # for row in list_admin:
-            #     if row.DeviceId:
-            #         notifBody = f'Registrasi User Baru ({APIKEY_decode["email"]}) Sukses'
-            #         notification_data = {
-            #             "notification": {
-            #                 "title": appName,
-            #                 "body": notifBody,
-            #                 "priority": "high",
-            #                 "icon": appFrontWebLogo,
-            #                 "click_action": f"{appFrontWebUrl()}#/admin/users",
-            #             },
-            #             "data": {
-            #                 "type": "new_reg_wp",
-            #                 "page": "users"
-            #             }
-            #         }
-            #         sendNotif = sendNotificationNative(row.DeviceId, notification_data)
-            #         if sendNotif.status_code == 200:
-            #             add_notif = Notifications(
-            #                 UserId=row.UserId,
-            #                 id_notificationsType=1,
-            #                 title="Registrasi User Baru",
-            #                 description=notifBody,
-            #                 created_by="system"
-            #             )
-            #             db.session.add(add_notif)
-            #             db.session.commit()
-            #
-            # if not addNewUser.UserId:
-            #     logger.error('insert new user to db failed')
-            #     return abort(make_response(jsonify({
-            #         'status_code': 212,
-            #         'message': 'Terjadi Kesalahan!',
-            #         'data': {}
-            #     }), 500))
-            # apikeyResponse = {
-            #     'exp': datetime.now() + jwt_token_exp_min,
-            #     'UserId': addNewUser.UserId,
-            #     'UID': addNewUser.UID,
-            #     'WPID': '',
-            #     'ObyekBadanNo': '',
-            #     'GroupId': addNewUser.GroupId,
-            #     'code_group': addNewUser.code_group,
-            # }
-            # apikey = jwt.encode(apikeyResponse, jwt_secretkey, algorithm='HS256')
-            # apikeystr = apikey.decode("UTF-8")
-            # addNewUser.APIKey = apikeystr
-            # db.session.commit()
 
             result = insertNewUserWP(APIKEY_decode)
             logger.info(
@@ -1047,20 +911,6 @@ class ForgotCheckOtpResetPwd(Resource):
 
             return jsonify({'status_code': 1, 'message': 'Password Changed!'})
 
-            # now = datetime.now()
-            # id = str(uuid.uuid4())
-            # tokenNew = {
-            #     'exp': now + timedelta(minutes=5),
-            #     'origin': Origin,
-            #     'email': email,
-            #     'id': id
-            # }
-            # reset_token = jwt.encode(tokenNew, jwt_secretkey, algorithm='HS256')
-            # reset_token_str = reset_token.decode("UTF-8")
-            # reset_token_str_secure = encrypt_token(reset_token_str)
-            # return jsonify({'status_code': 1, 'message': 'OTP Valid!', 'data': {
-            #     'token': reset_token_str_secure, 'id': id
-            # }})
 
         except jwt.ExpiredSignatureError as a:
             print(a)

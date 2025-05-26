@@ -19,8 +19,6 @@ class tblRole(db.Model, SerializerMixin):
 
     __tablename__ = 'tblRole'
     RoleId = db.Column(db.Integer, primary_key=True)
-    # UrlId = db.Column(db.Integer, primary_key=True)
-    # GroupId = db.Column(db.String, nullable=False)
     Get = db.Column(db.Boolean, default=False, server_default="false")
     Post = db.Column(db.Boolean, default=False, server_default="false")
     Put = db.Column(db.Boolean, default=False, server_default="false")
@@ -46,13 +44,6 @@ class tblRole(db.Model, SerializerMixin):
 
     class ListAll(Resource):
 
-        # def is_active(self):
-        #     from controller.tblUser import tblUser
-        #     userid = db.query.filter_by(user_id=tblUser.UserId).first()
-        #     if userid.active:
-        #         return True
-        #     else:
-        #         return False
 
         def get(self, *args, **kwargs):
 
@@ -66,10 +57,6 @@ class tblRole(db.Model, SerializerMixin):
             parser.add_argument('filter_groupid', type=str)
 
             args = parser.parse_args()
-            # UserId = kwargs['claim']["UserId"]
-            # print(UserId)
-            # select_query = tblRole.query
-
             select_query = db.session.query(
                 tblRole.RoleId, tblUrl.UrlId, tblUrl.Url, tblGroupUser.GroupId, tblGroupUser.nama_group, tblRole.Get,tblRole.Post,
                 tblRole.Put, tblRole.Del, tblRole.Upload)\

@@ -51,11 +51,9 @@ class tblUser(db.Model, SerializerMixin):
     last_request = db.Column(db.TIMESTAMP, nullable=True)
 
     GroupId = db.Column(db.Integer, db.ForeignKey('tblGroupUser.GroupId'), nullable=False)
-    PegawaiID = db.Column(db.String, db.ForeignKey('MsPegawai.PegawaiID'), nullable=False)
-    WapuID = db.Column(db.Integer, db.ForeignKey('MsWapu.WapuID'), nullable=False)
+    PegawaiID = db.Column(db.String,  nullable=False)
+    WapuID = db.Column(db.Integer, nullable=False)
 
-    wapu = db.relationship('MsWapu', foreign_keys=WapuID)
-    pegawai = db.relationship('MsPegawai', foreign_keys=PegawaiID )
     Group = db.relationship('tblGroupUser')
 
 
